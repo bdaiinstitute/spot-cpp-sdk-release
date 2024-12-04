@@ -1,7 +1,0 @@
-{
-  "name": "spot-cpp-sdk dev container",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  }
-}

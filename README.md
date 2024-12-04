@@ -6,27 +6,28 @@ is subject to the terms and conditions of the Boston Dynamics Software
 Development Kit License (20191101-BDSDK-SL).
 -->
 
-# Spot C++ SDK (BETA) in ROS 2
+# Boston Dynamics API - C++
 
-**This is a fork of [`boston-dynamics/spot-cpp-sdk`](https://github.com/boston-dynamics/spot-cpp-sdk) patched for ROS 2 release. Proceed upstream for any inquiry or request.**
+The C++ SDK includes C++ libraries and examples.
 
-Develop applications and payloads for Spot using the Boston Dynamics Spot C++ SDK. The Spot C++ SDK is a **beta** release.
+## Coding standards and dependencies.
 
-The C++ SDK consists of:
+The C++ implementation follows these requirements:
 
-- [C++ client library](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2/docs/cpp). Applications using the C++ library can control Spot and read sensor and health information from Spot. A variety of example programs and a QuickStart guide are also included.
-- [Spot C++ SDK repository **fork***](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2). The GitHub repository where all of the Spot C++ SDK code patched for ROS 2 release is hosted.
+- A modern C++14 compiler toolchain.
+- Does not make use of exceptions or RTTI.
+- Generally complies with the Google C++ style guide.
+- Doxygen-friendly comments, particularly in header files.
 
-The official Spot SDK documentation also contains information relevant to the C++ SDK:
+Library Dependencies:
 
-- [Conceptual documentation](https://dev.bostondynamics.com/docs/concepts/readme). These documents explain the key abstractions used by the Spot API.
-- [Payload developer documentation](https://dev.bostondynamics.com/docs/payload/readme). Payloads add additional sensing, communication, and control capabilities beyond what the base platform provides. The Payload ICD covers the mechanical, electrical, and software interfaces that Spot supports.
-- [Spot API protocol definition](https://dev.bostondynamics.com/docs/protos/readme). This reference guide covers the details of the protocol applications used to communicate to Spot. Application developers who wish to use a language other than Python can implement clients that speak the protocol.
-
-This is version 4.1.0 of the C++ SDK. Please review the [Release Notes](https://github.com/bdaiinstitute/spot-cpp-sdk/blob/ros2/docs/cpp_release_notes.md) to see what has changed.
+- C++14 standard library. Many advanced features, such as functional programming and concurrency support are used.
+- Google's gRPC C++ library, as well as it's transitive dependencies.
+- Unit tests depend on gTest.
+- Eigen for math operations
 
 ## Contents
 
-- [C++ Library](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2/docs/cpp)
-- [Release Notes](https://github.com/bdaiinstitute/spot-cpp-sdk/blob/ros2/docs/cpp_release_notes.md)
-- [SDK Repository](https://github.com/bdaiinstitute/spot-cpp-sdk)
+- [Client](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2/cpp/bosdyn/client)
+- [Common](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2/cpp/bosdyn/common)
+- [Math](https://github.com/bdaiinstitute/spot-cpp-sdk/tree/ros2/cpp/bosdyn/math)
