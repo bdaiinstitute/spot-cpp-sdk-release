@@ -1,0 +1,12 @@
+Source: ros-humble-bosdyn
+Section: misc
+Priority: optional
+Maintainer: Boston Dynamics AI Institute <opensource@theaiinstitute.com>
+Build-Depends: debhelper (>= 9.0.0), libcli11-dev, libeigen3-dev, libgrpc++-dev, libprotobuf-dev, libprotobuf23, libprotoc-dev, protobuf-compiler, protobuf-compiler-grpc, ros-humble-ament-cmake, ros-humble-ament-cmake-python, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-bosdyn
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcli11-dev, libeigen3-dev, libgrpc++-dev, libprotobuf-dev, libprotobuf23, libprotoc-dev, protobuf-compiler, protobuf-compiler-grpc, ros-humble-ros-workspace
+Description: Boston Dynamics Spot C++ SDK
